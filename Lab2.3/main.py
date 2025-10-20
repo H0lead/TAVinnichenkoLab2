@@ -11,6 +11,7 @@ for element in strarr.split(" "):
     arr.append(int(element))
 print("Початковий масив: " + output(arr))
 length = len(arr)
+sorted = True
 
 for i in range(length-1):
     for j in range(length-i-1):
@@ -18,5 +19,9 @@ for i in range(length-1):
             tmp = arr[j+1]
             arr[j+1] = arr[j]
             arr[j] = tmp
+            sorted = False
+    print(f"Масив після {i+1} ітерації: {output(arr)}")
+    if sorted:
+        break
 
 print("Відсортований масив: " + output(arr))
