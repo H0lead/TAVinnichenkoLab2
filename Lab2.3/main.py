@@ -11,9 +11,9 @@ for element in strarr.split(" "):
     arr.append(int(element))
 print("Початковий масив: " + output(arr))
 length = len(arr)
-sorted = True
 
 for i in range(length-1):
+    sorted = True
     for j in range(length-i-1):
         if arr[j] > arr[j+1]:
             tmp = arr[j+1]
